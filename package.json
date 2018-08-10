@@ -1,0 +1,33 @@
+{
+  "name": "firedock",
+  "version": "1.0.0",
+  "description": "Firebase Admin Wrapper for Controlled Server Operations",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewRedican/firedock.git"
+  },
+  "keywords": [
+    "firebase",
+    "api",
+    "wrapper",
+    "controlled",
+    "server-side",
+    "server",
+    "cloud",
+    "functions",
+    "operations"
+  ],
+  "author": "andrew.redican.mejia@gmail.com",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "bugs": {
+    "url": "https://github.com/AndrewRedican/firedock/issues"
+  },
+  "homepage": "https://github.com/AndrewRedican/firedock#readme"
+}
