@@ -7,5 +7,5 @@ _Documentation In Progress_
 
 ### License
 
-Default: AGPL
-Commercial Purposes: MIT (Available for purchase)
++ Default: AGPL
++ Commercial Purposes: MIT (Available for purchase)

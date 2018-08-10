@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/AndrewRedican/firedock/issues"
   },
-  "homepage": "https://github.com/AndrewRedican/firedock#readme"
+  "homepage": "https://github.com/AndrewRedican/firedock#readme",
+  "dependencies": {
+    "mitsuketa": "^1.4.3"
+  }
 }
