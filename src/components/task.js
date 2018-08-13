@@ -1,8 +1,8 @@
-import Control from './control';
+import Action from './action'
 
-function Task( taskName, suiteName ) {
+function Task ( name, suiteName ) {
 
-    this.controllers = [
+    this.actions = [
         'start',
         'cancel',
         'stop',
@@ -13,20 +13,18 @@ function Task( taskName, suiteName ) {
         'schedule',
         'unschedule'
     ]
-    const controllersApi = ((controllers) => {
-        let intializedControllers = {}
-        controllers.forEach( controlName => {
-            intializedControllers[controlName] = Control(controlName,taskName,suiteName)
-        })
-        return intializedControllers
-    })(controllers)
 
-
-
-
-
-
-    this.template = {
+    let
+        nodes = {},
+        actions = {}
+    
+    this.actions.forEach( action => {
+        const { node, run } = new Action(action,name,suiteName) // Missing DB
+        nodes[action] = node
+        actions[action] = run
+    })
+    
+    this.node = {
         name         : false,
         type         : false,
         description  : false,
@@ -37,19 +35,11 @@ function Task( taskName, suiteName ) {
         inputs       : false,
         outputs      : false,
         triggers     : false,
-        controllers  : ((controllers,controllersApi) => {
-            const templates = {}
-            controllers.forEach( controlName => {
-                templates[controlName] = controllersApi[controlName].template
-            })
-            return templates
-        })(controllers,controllersApi),
+        actions      : nodes,
         settings     : false,
         lastExecuted : false
     }
-    this.functions = function(){
-        return true
-    }
+    this.run = actions
 }
 
-module = module.exports = task;
+module = module.exports = Task;
